@@ -10,9 +10,11 @@ def reduce_edge_quals(in_path, out_path, fmt, edge_length, qual_reduction):
     elif fmt == "bam":
         in_mode = "rb"
         out_mode = "wb"
-    elif fmt == ".cram":
+    elif fmt == "cram":
         in_mode = "rc"
         out_mode = "wc"
+    else:
+        raise ValueError(f"Unknown format: {fmt}")
 
     in_sam = pysam.AlignmentFile(in_path, in_mode)
     out_sam = pysam.AlignmentFile(out_path, out_mode, template=in_sam)
