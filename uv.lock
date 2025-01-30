@@ -1,0 +1,19 @@
+version = 1
+requires-python = ">=3.13"
+
+[[package]]
+name = "bam-trim-quals"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pysam" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pysam", specifier = ">=0.22.1" }]
+
+[[package]]
+name = "pysam"
+version = "0.22.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a6/bc/e0a79d74137643940f5406121039d1272f29f55c5330e7b43484b2259da5/pysam-0.22.1.tar.gz", hash = "sha256:18a0b97be95bd71e584de698441c46651cdff378db1c9a4fb3f541e560253b22", size = 4643640 }

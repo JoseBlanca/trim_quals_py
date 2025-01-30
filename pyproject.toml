@@ -1,0 +1,9 @@
+[project]
+name = "bam-trim-quals"
+version = "0.1.0"
+description = "Reduce qualities from the edges of the mapped reads"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pysam>=0.22.1",
+]
